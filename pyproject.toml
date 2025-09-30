@@ -1,0 +1,58 @@
+[project]
+name = "residential_administration"
+version = "0.1.0"
+
+dependencies = [
+    "pytest==8.4.2"
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff==0.13.2",
+    "logfire==4.10.0"
+]
+
+[tool.ruff]
+lint.select = [
+    "E",    # pycodestyle
+    "F",    # pyflakes
+    "I",    # isort
+    "W",    # Warnings
+    "D",    # pydocstyle
+    "B",
+    "D401", # First line should be in imperative mood
+    "T201",
+    "E501",
+    "UP",
+]
+lint.ignore = [
+    "UP006",
+    "UP007",
+    # We actually do want to import from typing_extensions
+    "UP035",
+    # Relax the convention by _not_ requiring documentation for every function parameter.
+    "D417",
+
+    # DOCSTRINGS
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D107",
+    "D202",
+    "D203",
+    "D205",
+    "D212",
+    "D400",
+    "D401",
+    "D404",
+    "D415",
+]
+
+line-length 88
+
+exclude = [
+    ".venv",
+    "data"
+]
