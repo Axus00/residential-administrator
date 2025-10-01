@@ -6,7 +6,8 @@ dependencies = [
     "pytest",
     "supabase",
     "python-dotenv",
-    "psycopg2"
+    "psycopg2",
+    "fastapi"
 ]
 
 [project.optional-dependencies]
