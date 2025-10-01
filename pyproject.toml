@@ -3,7 +3,10 @@ name = "residential_administration"
 version = "0.1.0"
 
 dependencies = [
-    "pytest==8.4.2"
+    "pytest",
+    "supabase",
+    "python-dotenv",
+    "psycopg2"
 ]
 
 [project.optional-dependencies]
